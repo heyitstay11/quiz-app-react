@@ -85,7 +85,7 @@ export default function App() {
 						<div className='question-text'>{ questions[currentQuestion].questionText}</div>
 					</div>
 					<div className='answer-section'>
-						{questions[currentQuestion].answerOptions.map((answer, i) => 
+						{questions[currentQuestion].answerOptions.sort(() => 0.5 - Math.random()).map((answer, i) => 
 								<button key={i} onClick={(e) => handleAnswerClick(answer.isCorrect)}>{answer.answerText}</button>
 						)}
 					</div>
